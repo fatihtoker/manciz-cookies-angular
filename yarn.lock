@@ -3950,6 +3950,12 @@ neo-async@^2.5.0:
   version "2.6.0"
   resolved "https://repo.anadolu.edu.tr/artifactory/api/npm/anadolu-npm/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
 
+ng-animate@^0.3.4:
+  version "0.3.4"
+  resolved "https://repo.anadolu.edu.tr/artifactory/api/npm/anadolu-npm/ng-animate/-/ng-animate-0.3.4.tgz#31202dcf78f98539b9a40b03e64366cbae323dd7"
+  dependencies:
+    tslib "^1.9.0"
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://repo.anadolu.edu.tr/artifactory/api/npm/anadolu-npm/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"

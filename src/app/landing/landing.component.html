@@ -17,13 +17,17 @@
     </h3>
   </div>
 
+  <div [@status]="(hidden) ? 'collapsed' : 'expanded'" class="flex-col-c-m p-l-15 p-r-15 p-t-50 p-b-50 spotify-list">
+    <iframe src="https://open.spotify.com/embed/user/berkaybuyuk/playlist/5ToeVKpav5OqSL9Vjviv62" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+  </div>
+
   <!--  -->
   <div class="flex-w flex-c-m p-b-35">
     <a href="https://www.instagram.com/mancizcookies/" target="_blank" class="size3 flex-c-m how-social trans-04 m-r-3 m-l-3 m-b-5">
       <i class="fa fa-instagram"></i>
     </a>
 
-    <a href="#" class="size3 flex-c-m how-social trans-04 m-r-3 m-l-3 m-b-5">
+    <a href="#" class="size3 flex-c-m how-social trans-04 m-r-3 m-l-3 m-b-5" (click)="onIconClicked()">
       <i class="fa fa-spotify"></i>
     </a>
 
