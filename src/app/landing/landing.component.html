@@ -1,16 +1,14 @@
-<div class="simpleslide1000">
+<!-- <div class="simpleslide1000">
   <div class="simpleslide100-item bg-img1" style="background-image: url('../../assets/images/bg.jpg');"></div>
 </div>
 
 <div class="flex-col-c-sb size1 overlay1">
-  <!--  -->
   <div class="w-full flex-w flex-sb-m p-l-80 p-r-80 p-t-22 p-lr-15-sm">
     <div class="wrappic1 m-r-30 m-t-10 m-b-10" style="text-align: center;">
       <a href="/"><img src="../../assets/images/icons/logo-md-lg.png" alt="LOGO"></a>
     </div>
   </div>
 
-  <!--  -->
   <div class="flex-col-c-m p-l-15 p-r-15 p-t-50 p-b-120">
     <h3 class="l1-txt1 txt-center p-b-35 respon1">
       Çok Yakında Açılıyoruz
@@ -21,7 +19,6 @@
     <iframe src="https://open.spotify.com/embed/user/berkaybuyuk/playlist/5ToeVKpav5OqSL9Vjviv62" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
   </div>
 
-  <!--  -->
   <div class="flex-w flex-c-m p-b-35">
     <a href="https://www.instagram.com/mancizcookies/" target="_blank" class="size3 flex-c-m how-social trans-04 m-r-3 m-l-3 m-b-5">
       <i class="fa fa-instagram"></i>
@@ -36,3 +33,76 @@
     </a>
   </div>
 </div>
+ -->
+
+ <!-- <div class="overlay">
+
+ </div> -->
+
+<!-- <div class="container">
+  <div class="row logo">
+    <div class="col-md col-logo">
+      <a href="/"><img src="../../assets/images/icons/logo-md-lg.png" alt="LOGO"></a>
+    </div>
+  </div>
+  <div class="row description">
+    <div class="col-md">
+      <h3 class="description">
+        Çok Yakında Açılıyoruz
+      </h3>
+    </div>
+  </div>
+  <div class="row person">
+    <div class="col-md">
+      person
+    </div>
+  </div>
+  <div class="row spotify">
+    <div [@status]="(hidden) ? 'collapsed' : 'expanded'" class="col-md">
+      <iframe src="https://open.spotify.com/embed/user/berkaybuyuk/playlist/5ToeVKpav5OqSL9Vjviv62" width="auto" height="300" frameborder="1" allowtransparency="true"></iframe>
+    </div>
+  </div>
+  <div class="row icons">
+    <div class="col-md col-icons">
+      <a href="#" (click)="onIconClicked()">
+        <i class="fa fa-spotify"></i>
+      </a>
+    </div>
+  </div>
+</div> -->
+
+<div class="overlay">
+</div>
+
+<div class="container flex-column">
+  <div class="row">
+    <div class="col-md col-sm-12 col-logo">
+      <a href="/"><img class="img-fluid" src="../../assets/images/icons/logo-md-lg.png" alt="LOGO"></a>
+    </div>
+  </div>
+  <div class="col-md col-sm-12">
+    <h3 class="description">
+      Çok Yakında Açılıyoruz
+    </h3>
+  </div>
+  <div class="col-md col-sm-12">
+    person
+  </div>
+  <div [@status]="(hidden) ? 'collapsed' : 'expanded'" class="col-md col-sm-12 col-spotify embed-responsive embed-responsive-16by9 clearfix">
+    <iframe class="spotify embed-responsive-item" src="https://open.spotify.com/embed/user/berkaybuyuk/playlist/5ToeVKpav5OqSL9Vjviv62"
+     height="300" height="400" allow="encrypted-media">
+   </iframe>
+  </div>
+  <div class="col-md col-sm-12 col-icons">
+    <a href="https://www.instagram.com/mancizcookies/" target="_blank" class="icon">
+    <i class="fa fa-instagram"></i>
+  </a>
+
+  <a href="#" (click)="onIconClicked()" class="icon">
+    <i class="fa fa-spotify"></i>
+  </a>
+
+  <a href="mailto:mancizcookies@gmail.com" class="icon" target="_top">
+    <i class="fa fa-paper-plane"></i>
+  </a>
+  </div>
