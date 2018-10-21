@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {trigger, transition, useAnimation, state, style, animate} from '@angular/animations';
-import {fadeInDown, fadeInUp} from 'ng-animate';
+import {bounce} from 'ng-animate';
 
 @Component({
   selector: 'app-landing',
@@ -20,11 +20,13 @@ import {fadeInDown, fadeInUp} from 'ng-animate';
       })),
       transition('collapsed => expanded', animate('450ms ease-out')),
       transition('expanded  => collapsed', animate('450ms ease-in'))
-    ])
+    ]),
+    trigger('bounce', [transition('0 => 1', useAnimation(bounce))])
   ]
 })
 export class LandingComponent implements OnInit {
   hidden = true;
+  bounce = false;
   constructor() { }
 
   ngOnInit() {
@@ -33,6 +35,7 @@ export class LandingComponent implements OnInit {
 
   onIconClicked() {
     this.hidden = !this.hidden;
+    this.bounce = !this.bounce;
   }
 
 }

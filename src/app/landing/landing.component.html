@@ -12,7 +12,7 @@
       Çok Yakında Açılıyoruz
     </h3>
   </div>
-  <div class="col-md col-sm-12">
+  <div [@bounce]="bounce" class="col-md col-sm-12">
     <img class="img-fluid" src="../../assets/images/icons/sm-cookiekiz.png" alt="kukigirl">
   </div>
   <div [@status]="(hidden) ? 'collapsed' : 'expanded'" class="col-md col-sm-12 col-spotify embed-responsive embed-responsive-16by9 clearfix">
@@ -23,13 +23,11 @@
   <div class="row">
     <div class="col-md col-sm-12 col-icons">
       <a href="https://www.instagram.com/mancizcookies/" target="_blank" class="icon">
-      <i class="fa fa-instagram"></i>
+        <i class="fa fa-instagram"></i>
       </a>
-
       <a href="#" (click)="onIconClicked()" class="icon">
         <i class="fa fa-spotify"></i>
       </a>
-
       <a href="mailto:mancizcookies@gmail.com" class="icon" target="_top">
         <i class="fa fa-paper-plane"></i>
       </a>
