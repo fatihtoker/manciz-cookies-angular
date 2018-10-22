@@ -21,11 +21,11 @@ import {bounce} from 'ng-animate';
       transition('collapsed => expanded', animate('450ms ease-out')),
       transition('expanded  => collapsed', animate('450ms ease-in'))
     ]),
-    trigger('bounce', [transition('0 => 1', useAnimation(bounce))])
+    trigger('bounce', [transition('1 => 0', useAnimation(bounce))])
   ]
 })
 export class LandingComponent implements OnInit {
-  hidden = true;
+  hidden = false;
   bounce = false;
   constructor() { }
 
