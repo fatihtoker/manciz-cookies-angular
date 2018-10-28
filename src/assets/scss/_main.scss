@@ -1,3 +1,7 @@
+body {
+
+}
+
 @font-face {
   font-family: Lato-Regular;
   src: url('/../../assets/fonts/Lato/Lato-Regular.ttf');
@@ -12,44 +16,32 @@
   font-family: PlayfairDisplay-Italic;
   src: url('/../../assets/fonts/PlayfairDisplay/PlayfairDisplay-Italic.ttf');
 }
-
-.container {
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  top: 0;
-  left: 0;
-  text-align: center;
-
-}
-
-.jumbotron {
-  //position: absolute;
+.background-cover {
   background: url('~src/assets/images/bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: block;
   position: fixed;
-  z-index: 0;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+}
+
+.container-fluid {
+  text-align: center;
+  flex-direction: column !important;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   display: block;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
 }
-
 i.fa {
   color: #fff;
   font-size: 18px;
@@ -59,47 +51,7 @@ i.fa {
   margin: 0.2rem;
   padding: 0.5rem;
 }
-
-.col-spotify {
-
-}
-
-.spotify {
-}
-
-.col-icons {
-  position: absolute;
-  bottom: 2rem;
-}
-
 i.fa:hover {
   background-color: #fff;
   color: #555;
-}
-
-.row {
-  background-color: transparent;
-}
-
-.description {
-  font-family: Lato-Hairline;
-  font-size: 3vw;
-  line-height: 1.1;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: no-wrap;
-
-
-}
-
-.flex-item {
-  width: 300px;
-  height: 450px;
 }
