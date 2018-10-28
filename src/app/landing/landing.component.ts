@@ -9,10 +9,12 @@ import {bounce} from 'ng-animate';
   animations: [
     trigger('status', [
       state('collapsed', style({
+        display: 'none',
         opacity: 0,
         transform: 'translateY(5%)',
       })),
       state('expanded', style({
+        display: 'flex',
         opacity: 1,
         transform: 'translateY(0)'
       })),
