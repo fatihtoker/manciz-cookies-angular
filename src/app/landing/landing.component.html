@@ -1,35 +1,39 @@
-<div class="background-cover">
-</div>
-<div class="overlay">
-</div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-4 col-logo col-content">
-      <img class="img-fluid" src="../../assets/images/icons/logo-md-lg.png" alt="LOGO">
-    </div>
-    <div [@bounce]="bounce" class="col-content col-sm-3">
-      <img class="img-fluid" src="../../assets/images/icons/sm-cookiekiz.png" alt="kukigirl">
-    </div>
-    <div [@status]="(hidden) ? 'collapsed' : 'expanded'" class="col-sm-3 col-content col-spotify embed-responsive embed-responsive-16by9 clearfix">
-      <iframe class="spotify embed-responsive-item" src="https://open.spotify.com/embed/user/wj8tfs9wolmlik26pveouk1dl/playlist/4B51Pm6U6nBHiSJyPSdDWF"
-      allow="encrypted-media">
-     </iframe>
-    </div>
-    <div class="col-sm-2 col-icons col-content fixed-bottom">
-      <a href="https://www.instagram.com/mancizcookies/" target="_blank" class="icon">
-        <i class="fa fa-instagram"></i>
-      </a>
-      <a (click)="onIconClicked()" class="icon">
-        <i class="fa fa-spotify"></i>
-      </a>
-      <a href="mailto:mancizcookies@gmail.com" class="icon" target="_top">
-        <i class="fa fa-paper-plane"></i>
-      </a>
+
+
+<div class="background-cover">
+  <div class="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 offset-md-3 col-logo col-content">
+          <img class="img-fluid" src="../../assets/images/icons/logo-md-lg.png" alt="LOGO">
+        </div>
+        <div [@bounce]="bounce" class="col-content col-sm-12 col-md-6 offset-md-3">
+          <img class="img-fluid" src="../../assets/images/icons/sm-cookiekiz.png" alt="kukigirl">
+        </div>
+        <div class="col-sm-12 col-md-8 offset-md-2 embed-responsive embed-responsive-21by9 col-content col-spotify">
+          <iframe [@status]="(hidden) ? 'collapsed' : 'expanded'" class="embed-responsive-item" src="https://open.spotify.com/embed/user/wj8tfs9wolmlik26pveouk1dl/playlist/4B51Pm6U6nBHiSJyPSdDWF"
+          allow="encrypted-media">
+         </iframe>
+        </div>
+        <div class="col-sm-12 col-md-4 offset-md-4 col-icons col-content">
+          <a href="https://www.instagram.com/mancizcookies/" target="_blank" class="icon">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a (click)="onIconClicked()" class="icon">
+            <i class="fa fa-spotify"></i>
+          </a>
+          <a href="mailto:mancizcookies@gmail.com" class="icon" target="_top">
+            <i class="fa fa-paper-plane"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<!-- <div class="container">
+
+
+<!-- <div class="container-fluid">
   <div class="row">
     <div class="col-12 col-logo">
       <a href="/"><img class="img-fluid" src="../../assets/images/icons/logo-md.png" alt="LOGO"></a>
@@ -47,7 +51,7 @@
      </iframe>
     </div>
   </div>
-  <div class="row">
+  <div class="row fixed-bottom">
     <div class="col-12 col-icons">
       <a href="https://www.instagram.com/mancizcookies/" target="_blank" class="icon">
         <i class="fa fa-instagram"></i>

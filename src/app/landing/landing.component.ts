@@ -14,7 +14,7 @@ import {bounce} from 'ng-animate';
         transform: 'translateY(5%)',
       })),
       state('expanded', style({
-        display: 'flex',
+        display: 'block',
         opacity: 1,
         transform: 'translateY(0)'
       })),
