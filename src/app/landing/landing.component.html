@@ -1,35 +1,30 @@
-
-
-
-<div class="background-cover d-flex flex-column">
-  <div class="overlay">
-      <header>
-        <img class="img-fluid" src="../../assets/images/icons/logo-md-lg.png" alt="LOGO">
-      </header>
-      <main class="container flex-fill">
-        <div class="row">
-          <div [@bounce]="bounce" class="col-content col-md-7">
-            <img class="img-fluid" src="../../assets/images/icons/sm-cookiekiz.png" alt="kukigirl">
-          </div>
-          <div class="col-sm-5 embed-responsive embed-responsive-21by9 col-content col-spotify">
-            <iframe [@status]="(hidden) ? 'collapsed' : 'expanded'" class="embed-responsive-item" src="https://open.spotify.com/embed/user/wj8tfs9wolmlik26pveouk1dl/playlist/4B51Pm6U6nBHiSJyPSdDWF"
-            allow="encrypted-media">
-           </iframe>
-          </div>
-        </div>
-      </main>
-      <footer>
-        <a href="https://www.instagram.com/mancizcookies/" target="_blank" class="icon">
-          <i class="fa fa-instagram"></i>
-        </a>
-        <a (click)="onIconClicked()" class="icon">
-          <i class="fa fa-spotify"></i>
-        </a>
-        <a href="mailto:mancizcookies@gmail.com" class="icon" target="_top">
-          <i class="fa fa-paper-plane"></i>
-        </a>
-      </footer>
-  </div>
+<div class="wrapper d-flex flex-column">
+  <header>
+    <img class="img-fluid" src="../../assets/images/icons/logo-lg.png" alt="LOGO">
+  </header>
+  <main class="container flex-fill">
+    <div class="row">
+      <div [@bounce]="bounce" class="col-content col-sm-10 col-md-8 col-lg-6 ">
+        <img class="img-fluid col-girl" src="../../assets/images/icons/cookie-girl-md.png" alt="kukigirl">
+      </div>
+      <div class="col-sm-12 col-md-10 col-lg-10 embed-responsive embed-responsive-21by9 col-content col-spotify">
+        <iframe [@status]="(hidden) ? 'collapsed' : 'expanded'" class="embed-responsive-item" src="https://open.spotify.com/embed/user/wj8tfs9wolmlik26pveouk1dl/playlist/4B51Pm6U6nBHiSJyPSdDWF"
+        allow="encrypted-media">
+       </iframe>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <a href="https://www.instagram.com/mancizcookies/" target="_blank" class="icon">
+      <i class="fa fa-instagram"></i>
+    </a>
+    <a (click)="onIconClicked()" class="icon">
+      <i class="fa fa-spotify"></i>
+    </a>
+    <a href="mailto:mancizcookies@gmail.com" class="icon" target="_top">
+      <i class="fa fa-paper-plane"></i>
+    </a>
+  </footer>
 </div>
 
 
