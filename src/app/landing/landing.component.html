@@ -4,13 +4,15 @@
   </header>
   <main class="container flex-fill">
     <div class="row">
-      <div [@bounce]="bounce" class="col-content col-sm-10 col-md-8 col-lg-6 ">
+      <div [@bounce]="bounce" class="col-8 col-md-6 col-lg-6 col-xl-4">
+
         <img class="img-fluid col-girl" src="../../assets/images/icons/cookie-girl-md.png" alt="kukigirl">
       </div>
-      <div class="col-sm-12 col-md-10 col-lg-10 embed-responsive embed-responsive-21by9 col-content col-spotify">
+
+      <div class="col-12 col-md-8 col-lg-6 col-xl-6 embed-responsive embed-responsive-21by9 col-content col-spotify">
         <iframe [@status]="(hidden) ? 'collapsed' : 'expanded'" class="embed-responsive-item" src="https://open.spotify.com/embed/user/wj8tfs9wolmlik26pveouk1dl/playlist/4B51Pm6U6nBHiSJyPSdDWF"
-        allow="encrypted-media">
-       </iframe>
+                allow="encrypted-media">
+        </iframe>
       </div>
     </div>
   </main>
@@ -26,6 +28,9 @@
     </a>
   </footer>
 </div>
+
+<!--col-8 col-md-6 col-lg-4 col-xl-10
+col-12 col-md-10 col-lg-8 col-xl-12-->
 
 
 <!-- <div class="container-fluid">
