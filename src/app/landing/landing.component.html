@@ -1,65 +1,27 @@
-<div class="wrapper d-flex flex-column">
-  <div class="container flex-fill">
-    <div class="row">
-      <div class="col-12 col-md-10 col-lg-8 col-xl-6">
-        <img class="img-fluid" src="../../assets/images/icons/logo-cropped.png" alt="LOGO">
-      </div>
-      <div [@bounce]="bounce" class="col-9 col-md-6 col-lg-4 col-xl-4">
-        <img class="img-fluid col-girl" src="../../assets/images/icons/cookie-girl-md.png" alt="kukigirl">
-      </div>
-      <div class="col-12 col-md-12 col-lg-12 col-xl-12 embed-responsive embed-responsive-21by9 col-content col-spotify">
-        <iframe [@status]="(hidden) ? 'collapsed' : 'expanded'" class="embed-responsive-item" src="https://open.spotify.com/embed/user/wj8tfs9wolmlik26pveouk1dl/playlist/4B51Pm6U6nBHiSJyPSdDWF"
-                allow="encrypted-media">
-        </iframe>
-      </div>
-      <div class="col-8 col-md-6 col-lg-4 col-xl-2">
-        <a href="https://www.instagram.com/mancizcookies/" target="_blank" class="icon">
-          <i class="fa fa-instagram"></i>
-        </a>
-        <a (click)="onIconClicked()" class="icon">
-          <i class="fa fa-spotify"></i>
-        </a>
-        <a href="mailto:mancizcookies@gmail.com" class="icon" target="_top">
-          <i class="fa fa-paper-plane"></i>
-        </a>
-      </div>
-    </div>
+<div class="row row-landing">
+  <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+    <img class="img-fluid" src="../../assets/images/icons/logo-cropped.png" alt="LOGO">
+  </div>
+  <div [@bounce]="bounce" class="col-9 col-md-6 col-lg-4 col-xl-4">
+    <img class="img-fluid col-girl" src="../../assets/images/icons/cookie-girl-md.png" alt="kukigirl">
+  </div>
+  <div class="col-12 col-md-12 col-lg-12 col-xl-12 embed-responsive embed-responsive-21by9 col-content col-spotify">
+    <iframe [@status]="(hidden) ? 'collapsed' : 'expanded'" class="embed-responsive-item" src="https://open.spotify.com/embed/user/wj8tfs9wolmlik26pveouk1dl/playlist/4B51Pm6U6nBHiSJyPSdDWF"
+            allow="encrypted-media">
+    </iframe>
+  </div>
+  <div class="col-auto">
+    <button mat-raised-button routerLink="neredeyiz">Neredeyiz?</button>
+  </div>
+  <div class="col-8 col-md-6 col-lg-4 col-xl-2">
+    <a href="https://www.instagram.com/mancizcookies/" target="_blank" class="icon">
+      <i class="fa fa-instagram"></i>
+    </a>
+    <a (click)="onIconClicked()" class="icon">
+      <i class="fa fa-spotify"></i>
+    </a>
+    <a href="mailto:mancizcookies@gmail.com" class="icon" target="_top">
+      <i class="fa fa-paper-plane"></i>
+    </a>
   </div>
 </div>
-
-<!--col-8 col-md-6 col-lg-4 col-xl-10
-col-12 col-md-10 col-lg-8 col-xl-12-->
-
-
-<!-- <div class="container-fluid">
-  <div class="row">
-    <div class="col-12 col-logo">
-      <a href="/"><img class="img-fluid" src="../../assets/images/icons/logo-md.png" alt="LOGO"></a>
-    </div>
-  </div>
-  <div class="row">
-    <div [@bounce]="bounce" class="col-12">
-      <img class="img-fluid" src="../../assets/images/icons/sm-cookiekiz.png" alt="kukigirl">
-    </div>
-  </div>
-  <div class="row">
-    <div [@status]="(hidden) ? 'collapsed' : 'expanded'" class="col-12 col-spotify embed-responsive embed-responsive-16by9 clearfix">
-      <iframe class="spotify embed-responsive-item" src="https://open.spotify.com/embed/user/berkaybuyuk/playlist/5ToeVKpav5OqSL9Vjviv62"
-      allow="encrypted-media">
-     </iframe>
-    </div>
-  </div>
-  <div class="row fixed-bottom">
-    <div class="col-12 col-icons">
-      <a href="https://www.instagram.com/mancizcookies/" target="_blank" class="icon">
-        <i class="fa fa-instagram"></i>
-      </a>
-      <a href="#" (click)="onIconClicked()" class="icon">
-        <i class="fa fa-spotify"></i>
-      </a>
-      <a href="mailto:mancizcookies@gmail.com" class="icon" target="_top">
-        <i class="fa fa-paper-plane"></i>
-      </a>
-    </div>
-  </div>
-</div> -->
