@@ -1,4 +1,4 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
 import {trigger, transition, state, style, animate} from '@angular/animations';
 import anime from 'animejs';
 
@@ -24,9 +24,26 @@ import anime from 'animejs';
   ]
 })
 export class LandingComponent implements AfterViewInit {
+  girl = {
+    x: 0,
+    y: 0,
+    width: 0,
+    height: 0,
+    speedX: 5,
+    speedY: 5
+  };
+  transform3d = {
+    x: 0,
+    y: 0,
+    z: 0
+  };
+  windowWidth = window.outerWidth;
+  windowHeight = window.outerHeight;
+  transform: any;
   hidden = false;
-  bounce = false;
   loopAnimation: any;
+  @ViewChild('girl')
+  girlRef: ElementRef;
   constructor() { }
 
   ngAfterViewInit() {
@@ -38,9 +55,37 @@ export class LandingComponent implements AfterViewInit {
       duration: 500,
       easing: 'easeInSine'
     });
+    this.loopAnimation.pause();
+    this.calculation();
   }
   onIconClicked() {
     this.hidden = !this.hidden;
-    this.bounce = !this.bounce;
+    //this.transform = `translate3d(${this.girlX}px, ${this.girlY}px, 0)`;
+    console.log(this.girl);
+    //setInterval(this.loop, 1000);
+    this.loop();
+    //console.log(this.girl.nativeElement.offsetLeft);
+    //console.log(this.girl.nativeElement.offsetHeight);
+    //console.log(screen.availWidth);
+  }
+  calculation() {
+    this.girl.x = this.girlRef.nativeElement.offsetLeft;
+    this.girl.y = this.girlRef.nativeElement.offsetTop;
+    this.girl.height = this.girlRef.nativeElement.offsetHeight;
+    this.girl.width = this.girlRef.nativeElement.offsetWidth;
+  }
+  loop() {
+    console.log('inside loop()');
+    console.log(this.transform3d);
+    console.log(this.girl);
+      if (this.transform3d.x < this.girl.x) {
+        this.transform3d.x -= this.girl.speedX;
+      } else {
+        if (this.transform3d.x >= this.windowWidth - this.girl.x) {
+          this.transform3d.x -= this.girl.speedX;
+        }
+        this.transform3d.x += this.girl.speedX;
+      }
+      this.transform = `translate3d(${this.transform3d.x}px, ${this.transform3d.y}px, 0)`;
   }
 }
