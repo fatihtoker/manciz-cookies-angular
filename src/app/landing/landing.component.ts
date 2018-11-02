@@ -1,6 +1,6 @@
 import {AfterViewInit, Component} from '@angular/core';
 import {trigger, transition, state, style, animate} from '@angular/animations';
-import * as anime from 'animejs';
+import anime from 'animejs';
 
 @Component({
   selector: 'app-landing',
