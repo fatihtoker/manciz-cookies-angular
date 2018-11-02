@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {trigger, transition, useAnimation, state, style, animate} from '@angular/animations';
-import {bounce} from 'ng-animate';
+import {AfterViewInit, Component} from '@angular/core';
+import {trigger, transition, state, style, animate} from '@angular/animations';
+import * as anime from 'animejs';
 
 @Component({
   selector: 'app-landing',
@@ -20,22 +20,27 @@ import {bounce} from 'ng-animate';
       })),
       transition('collapsed => expanded', animate('450ms ease-out')),
       transition('expanded  => collapsed', animate('450ms ease-in'))
-    ]),
-    trigger('bounce', [transition('1 => 0', useAnimation(bounce))])
+    ])
   ]
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent implements AfterViewInit {
   hidden = false;
   bounce = false;
+  loopAnimation: any;
   constructor() { }
 
-  ngOnInit() {
-
+  ngAfterViewInit() {
+    this.loopAnimation = anime({
+      targets: '.col-girl',
+      translateY: 50,
+      direction: 'alternate',
+      loop: true,
+      duration: 500,
+      easing: 'easeInSine'
+    });
   }
-
   onIconClicked() {
     this.hidden = !this.hidden;
     this.bounce = !this.bounce;
   }
-
 }
