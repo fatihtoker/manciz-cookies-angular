@@ -1,18 +1,9 @@
-html, body{
-  min-height: 100vh;
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Roboto+Mono:100');
+@font-face {
+  font-family: 'Roboto Mono', monospace;
 }
 @font-face {
-  font-family: Lato-Regular;
-  src: url('/../../assets/fonts/Lato/Lato-Regular.ttf');
-}
-@font-face {
-  font-family: Lato-Hairline;
-  src: url('/../../assets/fonts/Lato/Lato-Hairline.ttf');
-}
-
-@font-face {
-  font-family: PlayfairDisplay-Italic;
-  src: url('/../../assets/fonts/PlayfairDisplay/PlayfairDisplay-Italic.ttf');
+  font-family: 'Poiret One', cursive;
 }
 .wrapper {
   background: url('~src/assets/images/bg-dark.jpg');
@@ -30,12 +21,13 @@ html, body{
   text-align: center;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
 }
 .row-landing {
   justify-content: space-between;
+  min-height: 80vh;
 }
 .row-location {
+  min-height: 80vh;
 }
 .icon > i.fa {
   color: #fff;
@@ -50,4 +42,9 @@ html, body{
     background-color: #fff;
     color: #555;
   }
+}
+.location-desc {
+  font-family: "Poiret One";
+  color: #fff;
+  font-size: 2vw;
 }
