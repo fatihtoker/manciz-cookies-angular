@@ -1,0 +1,38 @@
+<div class="row row-location">
+  <div class="col-12">
+    <div class="row flex-row">
+      <div class="col-12 col-md-6 offset-md-3">
+        <h3 class="location-desc">Çok yakında kapsamımızı genişletiyoruz</h3>
+      </div>
+      <div class="w-100"></div>
+      <div class="col-12 col-lg-6 col-cafe offset-lg-3">
+        <mat-card>
+          <mat-card-header>
+            <div mat-card-avatar class="card-header-image"></div>
+            <mat-card-title>Kare Kahve</mat-card-title>
+            <mat-card-subtitle>Yeşiltepe Mahallesi, 26210 Tepebaşı/Eskişehir</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <agm-map [latitude]="lat" [longitude]="long" [zoom]="15">
+              <agm-marker [latitude]="lat" [longitude]="long">
+              </agm-marker>
+            </agm-map>
+          </mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-card-actions>
+            <a mat-icon-button href="https://www.instagram.com/karekahve/" target="_blank">
+              <i class="fa fa-instagram fa-lg"></i>
+            </a>
+            <a mat-icon-button href="https://www.facebook.com/karekahve/" target="_blank">
+              <i class="fa fa-facebook fa-lg"></i>
+            </a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="w-100"></div>
+      <div class="col-12">
+        <button mat-raised-button routerLink="/">Geri Dön</button>
+      </div>
+    </div>
+  </div>
+</div>
