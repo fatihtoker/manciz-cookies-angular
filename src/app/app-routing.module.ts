@@ -4,8 +4,8 @@ import {LandingComponent} from './landing/landing.component';
 import {LocationsComponent} from './locations/locations.component';
 
 const routes: Routes = [
-  { path: '', component: LandingComponent },
-  { path: 'neredeyiz', component: LocationsComponent },
+  { path: '', component: LandingComponent, data: {animation: 'LandingPage'} },
+  { path: 'neredeyiz', component: LocationsComponent, data: {animation: 'LocationPage'} },
   { path: '**', component: LandingComponent}
 ];
 
