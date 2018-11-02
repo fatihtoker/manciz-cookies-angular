@@ -6,9 +6,7 @@ export const slideInAnimation =
       style({ position: 'relative' }),
       query(':enter, :leave', [
         style({
-          position: 'relative',
-          top: 0,
-          left: 0,
+          position: 'fixed',
           width: '100%'
         })
       ]),
@@ -18,10 +16,10 @@ export const slideInAnimation =
       query(':leave', animateChild()),
       group([
         query(':leave', [
-          animate('150ms ease-in', style({ left: '100%'}))
+          animate('200ms ease-in', style({ left: '100%'}))
         ]),
         query(':enter', [
-          animate('150ms ease-in', style({ left: '0%'}))
+          animate('200ms ease-in', style({ left: '0%'}))
         ])
       ]),
       query(':enter', animateChild()),
