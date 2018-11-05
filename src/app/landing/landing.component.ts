@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {trigger, transition, state, style, animate} from '@angular/animations';
 import anime from 'animejs';
 
@@ -20,72 +20,64 @@ import anime from 'animejs';
       })),
       transition('collapsed => expanded', animate('450ms ease-out')),
       transition('expanded  => collapsed', animate('450ms ease-in'))
+    ]),
+    trigger('size', [
+      state('big', style({
+        transform: 'translateY(40%)'
+      })),
+      transition('big <=> normal', animate('450ms ease-in'))
     ])
   ]
 })
-export class LandingComponent implements AfterViewInit {
-  girl = {
-    x: 0,
-    y: 0,
-    width: 0,
-    height: 0,
-    speedX: 5,
-    speedY: 5
-  };
-  transform3d = {
-    x: 0,
-    y: 0,
-    z: 0
-  };
-  windowWidth = window.outerWidth;
-  windowHeight = window.outerHeight;
-  transform: any;
+export class LandingComponent implements AfterViewInit, OnInit {
   hidden = false;
+  isBig = false;
+  girl = {
+    size: function (big) {
+      return big ? 'lg' : 'md';
+    },
+    class: function (big) {
+      return big ? 'col-12 col-md-8 col-lg-6' : 'col-9 col-md-6 col-lg-4';
+    }
+  };
   loopAnimation: any;
-  @ViewChild('girl')
-  girlRef: ElementRef;
+  loopAnimationBig: any;
   constructor() { }
 
+  ngOnInit() {
+  }
   ngAfterViewInit() {
     this.loopAnimation = anime({
       targets: '.col-girl',
-      translateY: 50,
+      translateY: '10%',
       direction: 'alternate',
       loop: true,
       duration: 500,
-      easing: 'easeInSine'
+      easing: 'easeInSine',
     });
-    this.loopAnimation.pause();
-    this.calculation();
+    this.loopAnimationBig = anime({
+      targets: '.col-girl',
+      translateY: ['40%', '50%'],
+      direction: 'alternate',
+      loop: true,
+      duration: 500,
+      easing: 'easeInSine',
+      autoplay: false
+    });
   }
   onIconClicked() {
     this.hidden = !this.hidden;
-    //this.transform = `translate3d(${this.girlX}px, ${this.girlY}px, 0)`;
-    console.log(this.girl);
-    //setInterval(this.loop, 1000);
-    this.loop();
-    //console.log(this.girl.nativeElement.offsetLeft);
-    //console.log(this.girl.nativeElement.offsetHeight);
-    //console.log(screen.availWidth);
+    this.isBig = !this.isBig;
+    if (this.isBig) {
+      this.loopAnimation.pause();
+      this.loopAnimationBig.play();
+    } else {
+      this.loopAnimationBig.pause();
+      this.loopAnimation.play();
+    }
   }
-  calculation() {
-    this.girl.x = this.girlRef.nativeElement.offsetLeft;
-    this.girl.y = this.girlRef.nativeElement.offsetTop;
-    this.girl.height = this.girlRef.nativeElement.offsetHeight;
-    this.girl.width = this.girlRef.nativeElement.offsetWidth;
-  }
-  loop() {
-    console.log('inside loop()');
-    console.log(this.transform3d);
-    console.log(this.girl);
-      if (this.transform3d.x < this.girl.x) {
-        this.transform3d.x -= this.girl.speedX;
-      } else {
-        if (this.transform3d.x >= this.windowWidth - this.girl.x) {
-          this.transform3d.x -= this.girl.speedX;
-        }
-        this.transform3d.x += this.girl.speedX;
-      }
-      this.transform = `translate3d(${this.transform3d.x}px, ${this.transform3d.y}px, 0)`;
+  onGirlClicked() {
+    this.hidden = !this.hidden;
+    this.isBig = !this.isBig;
   }
 }

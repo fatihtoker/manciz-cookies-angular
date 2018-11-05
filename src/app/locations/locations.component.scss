@@ -5,8 +5,22 @@ agm-map {
   background-image: url("../../assets/images/icons/kare-kahve.png");
   background-size: cover;
 }
-mat-card-title, mat-card-actions, mat-card-subtitle {
+mat-card-title, mat-card-subtitle {
   text-align: left;
+}
+mat-card {
+  background-color: transparent;
+}
+mat-card-actions {
+  text-align: center;
+}
+.instagram-icon {
+  &:hover {
+    color: #cf348f;
+  }
+}
+.col-button {
+  margin-top: 5rem;
 }
 .cafe-stock {
   height: 559px;

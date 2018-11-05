@@ -1,16 +1,16 @@
 <div class="row row-landing">
-  <div #girl class="col-9 col-md-6 col-lg-4 col-xl-4 col-girl" [style.transform]="transform">
-    <img class="img-fluid" src="../../assets/images/icons/cookie-girl-md.png" alt="kukigirl">
+  <div [@size]="(hidden) ? 'big' : 'normal'" [class]="girl.class(isBig) + ' col-girl'">
+    <img class="img-fluid" [src]="'../../assets/images/icons/cookie-girl-'+girl.size(isBig)+'.png'" alt="kukigirl" (click)="onGirlClicked()">
   </div>
-  <div class="col-12 col-md-12 col-lg-12 col-xl-12 embed-responsive embed-responsive-21by9 col-content col-spotify">
-    <iframe [@status]="(hidden) ? 'collapsed' : 'expanded'" class="embed-responsive-item" src="https://open.spotify.com/embed/user/wj8tfs9wolmlik26pveouk1dl/playlist/4B51Pm6U6nBHiSJyPSdDWF"
+  <div [@status]="(hidden) ? 'collapsed' : 'expanded'" class="col-12 embed-responsive embed-responsive-21by9 col-content col-spotify">
+    <iframe  class="embed-responsive-item" src="https://open.spotify.com/embed/user/wj8tfs9wolmlik26pveouk1dl/playlist/4B51Pm6U6nBHiSJyPSdDWF"
             allow="encrypted-media">
     </iframe>
   </div>
   <div class="col-8 col-md-6 col-lg-4 col-xl-2">
     <div class="row">
       <div class="col-12">
-        <button mat-raised-button routerLink="neredeyiz">Neredeyiz?</button>
+        <button mat-raised-button routerLink="neredeyiz" class="card-text bg-transparent mat-elevation-z0">Neredeyiz?</button>
       </div>
       <br>
       <div class="col-12">
