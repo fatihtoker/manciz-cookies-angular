@@ -68,6 +68,14 @@ export class LandingComponent implements AfterViewInit, OnInit {
   onIconClicked() {
     this.hidden = !this.hidden;
     this.isBig = !this.isBig;
+    this.toggleScale();
+    }
+  onGirlClicked() {
+    this.hidden = !this.hidden;
+    this.isBig = !this.isBig;
+    this.toggleScale();
+  }
+  toggleScale() {
     if (this.isBig) {
       this.loopAnimation.pause();
       this.loopAnimationBig.play();
@@ -75,9 +83,5 @@ export class LandingComponent implements AfterViewInit, OnInit {
       this.loopAnimationBig.pause();
       this.loopAnimation.play();
     }
-  }
-  onGirlClicked() {
-    this.hidden = !this.hidden;
-    this.isBig = !this.isBig;
   }
 }
